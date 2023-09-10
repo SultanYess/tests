@@ -1,0 +1,13 @@
+{% extends 'pets/base.html' %}
+{% block title %} {% endblock %}
+
+{% block content %}
+    <form method="post" class="create">
+        {% csrf_token %}
+        <h1>Форма добавление записи</h1> <br>
+        {{form.pets_name}} <br>
+        {{form.content}} <br>
+        <button class="btn btn-warning">Предосмотр</button>
+        <button class="btn btn-success">Добавить запись</button>
+    </form>
+{% endblock %}
